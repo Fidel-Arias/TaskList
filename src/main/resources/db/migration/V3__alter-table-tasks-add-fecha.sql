@@ -1,0 +1,1 @@
+ALTER TABLE tasks ADD COLUMN fecha_de_creacion DATE NOT NULL;
