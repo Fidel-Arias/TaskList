@@ -1,5 +1,33 @@
 # TASK_LIST
 
+# 🔨 CONFIGURACION DE LAS PROPIEDADES DE LA APLICACIÓN
+
+Se debe configurar en el archivo `application.properties` ubicada en la carpeta **`/src/main/resources/`**
+
+## PARA LA BASE DE DATOS
+
+Antes de configurar la base de datos se debe crear primero dentro de tu gestor con el comando: `CREATE DATABASE tasks_list;`
+
++ Para la base de datos se puede utilizar `mariadb` o `mysql` solo se debe cambiar en la propiedad **`spring.datasource.url`** y escoger una de las dos, luego colocar el nombre de tu base de datos en la variable `${DB_NAME}`
++ Para la propiedad `spring.datasource.username` se debe crear una variable de entorno con nombre `${DB_USER}` y configurar el user segun tu base de datos local
++ Para la propiedad `spring.datasource.password` se debe crear una variable de entorno con nombre `${DB_PASSWORD}` y configurar el password segun tu base de datos local
+
+```
+spring.datasource.url=jdbc:[mariadb|mysql]://localhost/${DB_NAME}
+spring.datasource.username=${DB_USER}
+spring.datasource.password=${DB_PASSWORD}
+```
+
+## 🔑 API SECRET PARA JWT
+
+Para la API_SECRET DE JWT es recomendable usar una variable de entorno llamada `${API_SECRET}` esta puede tener cualquier valor numeros, letras o alfanumerica
+
+```
+api.security.secret=${API_SECRET}
+```
+
+# 💻 PETICIONES PARA EL BACKEND
+
 ## Crear Usuarios
 
 Para crear usuarios en la base de datos se deben ingresar estos tres campos: username, email, password.
