@@ -1,6 +1,6 @@
 # TASK_LIST
 
-# 🔨 CONFIGURACION DE LAS PROPIEDADES DE LA APLICACIÓN
+## 🔨 CONFIGURACION DE LAS PROPIEDADES DE LA APLICACIÓN
 
 Se debe configurar en el archivo `application.properties` ubicada en la carpeta **`/src/main/resources/`**
 
